@@ -12,10 +12,9 @@ namespace LobsterAdventures.DAL.Implementations
     public class AdventureRepository : IAdventureRepository<Adventure>
     {
         private readonly MyContext _context;
-        public AdventureRepository(MyContext AdventureContext)
+        public AdventureRepository(MyContext context)
         {
-            _context = AdventureContext;
-            //_adventureContext.Database.EnsureCreated();
+            _context = context;
         }
 
         public async Task AddDecision(int adventureId, AddDecisionModel model)

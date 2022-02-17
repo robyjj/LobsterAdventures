@@ -41,6 +41,8 @@ namespace LobsterAdventures
             });
             services.AddTransient<IAdventureService, AdventureService>();
             services.AddTransient<IAdventureRepository<Adventure>, AdventureRepository>();
+            services.AddTransient<IDecisionService<DecisionQuery>, DecisionService>();
+            services.AddTransient<IDecisionRepository<DecisionQuery>, DecisionRepository>();
             services.AddDbContext<MyContext>(opt => opt.UseInMemoryDatabase("MyAdventures"));
             services.AddControllers().AddJsonOptions(x =>
              x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);

@@ -1,8 +1,6 @@
 ﻿using LobsterAdventures.BLL.Contracts;
-using LobsterAdventures.BLL.Implementations;
 using LobsterAdventures.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Threading.Tasks;
 
 namespace LobsterAdventures.Controllers
