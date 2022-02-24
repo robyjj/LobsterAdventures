@@ -1,4 +1,5 @@
 ﻿using LobsterAdventures.Models.Entities;
+using System.Collections.Generic;
 
 namespace LobsterAdventures.Models.Models
 {
@@ -6,8 +7,7 @@ namespace LobsterAdventures.Models.Models
     {
         public int PlayerId { get; set; }
         public int AdventureId { get; set; }
-        public DecisionQuery DecisionQuery { get; set; }
-        public int DecisionQueryId { get; set; }
-        public bool IsPositive { get; set; }
+        public List<QuestionsModel> Questions { get; set; }
     }
+
 }

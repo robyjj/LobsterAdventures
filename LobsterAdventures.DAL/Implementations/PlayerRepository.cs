@@ -20,8 +20,6 @@ namespace LobsterAdventures.DAL.Implementations
             var player = await _context.Players
                 .Include(p=>p.PlayerDecisions)
                 .ThenInclude(c=>c.DecisionQueries)
-                //.Include("PlayerDecisions")
-                //.Include("DecisionQueries")
                 .Where(p => p.PlayerId == playerId)
                 .SingleOrDefaultAsync();
             //var playerMappings =  await _context.PlayerDecisions

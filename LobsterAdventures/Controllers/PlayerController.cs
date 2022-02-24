@@ -51,7 +51,7 @@ namespace LobsterAdventures.Controllers
             //    new { id = adventureId },
             //    model.DecisionQuery
             //    );
-            return Ok(new { id = playerId });
+            return Ok();
         }
     }
 }
