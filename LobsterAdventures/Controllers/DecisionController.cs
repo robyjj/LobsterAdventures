@@ -19,7 +19,7 @@ namespace LobsterAdventures.Controllers
         }
 
         /// <summary>
-        /// Returns a single adventure information based on the Asset ID
+        /// Returns a single adventure information based on the  ID
         /// </summary>
         /// <returns></returns>
         [HttpGet]

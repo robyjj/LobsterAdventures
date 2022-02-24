@@ -28,7 +28,7 @@ namespace LobsterAdventures.BLL.Implementations
             adventure.DecisionQueries = new List<DecisionQuery>();
             var decisionQuery = new DecisionQuery
             {
-                //Id = 1,
+                Id = 1,
                 Negative = null,
                 Positive = null,
                 ParentId = null,

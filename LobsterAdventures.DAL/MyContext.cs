@@ -12,6 +12,8 @@ namespace LobsterAdventures.DAL
     {
         public DbSet<Adventure> Adventures { get; set; }
         public DbSet<DecisionQuery> DecisionQueries { get; set; }
+        public DbSet<Player> Players { get; set; }
+        public DbSet<PlayerDecisions> PlayerDecisions { get; set; }
 
         public MyContext(DbContextOptions options) : base(options)
         {
