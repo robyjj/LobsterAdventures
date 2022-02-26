@@ -46,10 +46,5 @@ namespace LobsterAdventures.BLL.Implementations
         {
             return await _adventureRepository.GetAdventures();
         }
-
-        async Task<IEnumerable<DecisionQuery>> IAdventureService.GetQueriesByAdventureId(int adventureID)
-        {
-            return await _adventureRepository.GetQueriesByAdventureId(adventureID);
-        }
     }
 }

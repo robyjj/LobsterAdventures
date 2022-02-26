@@ -12,7 +12,6 @@ namespace LobsterAdventures.BLL.Contracts
         Task<IEnumerable<Adventure>> GetAdventures();
         Task<Adventure> GetAdventureById(int id);
         Task CreateAdventure(Adventure Adventure);
-        Task AddDecision(int adventureId, AddDecisionModel model);
-        Task<IEnumerable<DecisionQuery>> GetQueriesByAdventureId(int adventureID);
+        Task AddDecision(int adventureId, AddDecisionModel model);        
     }
 }

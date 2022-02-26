@@ -2,6 +2,7 @@
 using LobsterAdventures.Models.Entities;
 using LobsterAdventures.Models.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -38,6 +39,14 @@ namespace LobsterAdventures.DAL.Implementations
         {
             return await _context.DecisionQueries.Include("Adventure").Where(d=>d.Id == decisionId).SingleOrDefaultAsync();
                             
+        }
+
+        public async Task<IEnumerable<DecisionQuery>> GetQueriesByAdventureId(int adventureID)
+        {
+            return await _context.DecisionQueries
+                .Where(d => d.AdventureId == adventureID).ToArrayAsync();
+            //.Include("Adventure")
+
         }
     }
 }

@@ -69,18 +69,6 @@ namespace LobsterAdventures.Controllers
                 );
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="adventureId"></param>
-        /// <returns></returns>
-        [HttpGet]
-        [Route("{adventureId}/Decision")]
-        public async Task<ActionResult<Adventure>> GetDecisionQueries(int adventureId)
-        {
-            var queries = await _adventureService.GetQueriesByAdventureId(adventureId);
-            return Ok(queries);
-        }
 
         /// <summary>
         /// Adds a Decision to an Adventure

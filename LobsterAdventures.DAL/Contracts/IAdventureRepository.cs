@@ -17,6 +17,6 @@ namespace LobsterAdventures.DAL.Contracts
         Task<List<T>> DeleteMultiple(int[] ids);
 
         Task AddDecision(int AdventureID, AddDecisionModel model);
-        Task<IEnumerable<DecisionQuery>> GetQueriesByAdventureId(int adventureID);
+        
     }
 }

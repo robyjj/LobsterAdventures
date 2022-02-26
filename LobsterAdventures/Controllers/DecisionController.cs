@@ -19,7 +19,20 @@ namespace LobsterAdventures.Controllers
         }
 
         /// <summary>
-        /// Returns a single adventure information based on the  ID
+        /// Get the questions /decision for an adventure
+        /// </summary>
+        /// <param name="adventureId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("Adventure/{adventureId}")]
+        public async Task<ActionResult<Adventure>> GetDecisionQueries(int adventureId)
+        {
+            var queries = await _decisionService.GetQueriesByAdventureId(adventureId);
+            return Ok(queries);
+        }
+
+        /// <summary>
+        /// Returns the next decision based on the previous answer
         /// </summary>
         /// <returns></returns>
         [HttpGet]

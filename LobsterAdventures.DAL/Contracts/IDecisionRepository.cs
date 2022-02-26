@@ -13,6 +13,6 @@ namespace LobsterAdventures.DAL.Contracts
         Task<T> GetNextDecision(NextDecisionModel nextDecisionModel);
         Task<T> GetDecisionByDecisionId(int decisionId);
 
-        //Task<IEnumerable<DecisionQuery>> GetQueriesByAdventureId(int adventureID);
+        Task<IEnumerable<T>> GetQueriesByAdventureId(int adventureID);
     }
 }

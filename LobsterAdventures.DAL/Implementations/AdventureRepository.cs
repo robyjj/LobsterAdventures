@@ -81,13 +81,5 @@ namespace LobsterAdventures.DAL.Implementations
             _context.Adventures.Update(adventure);
             await _context.SaveChangesAsync();
         }
-
-        public async Task<IEnumerable<DecisionQuery>> GetQueriesByAdventureId(int adventureID)
-        {
-            return await _context.DecisionQueries
-                .Where(d => d.AdventureId == adventureID).ToArrayAsync();
-            //.Include("Adventure")
-            
-        }
     }
 }
