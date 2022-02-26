@@ -11,12 +11,12 @@ namespace LobsterAdventures.Controllers
     public class AdventureController : Controller
     {
         private readonly IAdventureService _adventureService;
-   
+
         public AdventureController(IAdventureService adventureService)
         {
             _adventureService = adventureService;
         }
-    
+
         /// <summary>
         /// Returns the complete list of adventures
         /// </summary>
@@ -31,7 +31,7 @@ namespace LobsterAdventures.Controllers
         }
 
         /// <summary>
-        /// Returns a single adventure information based on the Asset ID
+        /// Returns a single adventure information based on the adventure ID
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -99,7 +99,7 @@ namespace LobsterAdventures.Controllers
         /// </remarks>
         [HttpPost]
         [Route("{adventureId}/Decision")]
-        public async Task<ActionResult<Adventure>> Post( int adventureId, [FromBody] AddDecisionModel model)
+        public async Task<ActionResult<Adventure>> Post(int adventureId, [FromBody] AddDecisionModel model)
         {
             await _adventureService.AddDecision(adventureId, model);
             return CreatedAtAction(
