@@ -32,5 +32,9 @@ You would have to run the app locally (using Visual Studio or any other IDE) to 
 
 I have pre-populated a player and some questions in the AddTestData() method within the Startup.cs file
 
+Please use the Api's in the PlayerController to 
+- Input the player decision (POST Call)
+- Retrieve Path taken by the player (GET Call)
+
 
 

@@ -90,6 +90,50 @@ namespace LobsterAdventures
             };
             context.Players.Add(player1);
 
+            var dq7 = new DecisionQuery
+            {
+                AdventureId = 1,
+                Adventure = adventure1,
+                Id = 7,
+                NegativeId = null,
+                PositiveId = null,
+                ParentId = 4,
+                Title = "We are Sorry , we hope to serve you better next time :("
+            };
+
+            var dq6 = new DecisionQuery
+            {
+                AdventureId = 1,
+                Adventure = adventure1,
+                Id = 6,
+                NegativeId = null,
+                PositiveId = null,
+                ParentId = 4,
+                Title = "Thats Great , Do visit us again !!  :)"
+            };
+
+            var dq5 = new DecisionQuery
+            {
+                AdventureId = 1,
+                Adventure = adventure1,
+                Id = 5,
+                NegativeId = 5,
+                PositiveId = 4,
+                ParentId = 2,
+                Title = "Sorry we dont have anything else.. See you later . Bye !!"
+            };
+
+            var dq4 = new DecisionQuery
+            {
+                AdventureId = 1,
+                Adventure = adventure1,
+                Id = 4,
+                NegativeId = 7,
+                PositiveId = 6,
+                ParentId = 2,
+                Title = "Is the coffee Good ?"
+            };
+
             var dq3 = new DecisionQuery
             {
                 AdventureId = 1,
@@ -105,10 +149,10 @@ namespace LobsterAdventures
                 AdventureId = 1,
                 Adventure = adventure1,
                 Id = 2,
-                Negative = null,
-                Positive = null,
+                NegativeId = 5,
+                PositiveId = 4,
                 ParentId = 1,
-                Title = "Do you want to go Left ?"
+                Title = "Do you want a coffee ?"
             };
             var dq1 = new DecisionQuery
             {
@@ -123,6 +167,10 @@ namespace LobsterAdventures
             context.DecisionQueries.Add(dq1);
             context.DecisionQueries.Add(dq2);
             context.DecisionQueries.Add(dq3);
+            context.DecisionQueries.Add(dq4);
+            context.DecisionQueries.Add(dq5);
+            context.DecisionQueries.Add(dq6);
+            context.DecisionQueries.Add(dq7);
             context.SaveChanges();
         }
     }
